@@ -13,10 +13,10 @@ RUN apt-get -fy install curl aptitude git
 RUN apt-get -fy install python3 python3-apt python3-mysqldb
 
 # download and install the latest, greatest Python packages using pip
-RUN curl "https://bootstrap.pypa.io/pip/3.6/get-pip.py" > /usr/bin/get-pip.py \
-&& python3 /usr/bin/get-pip.py \
-&& pip install pip3 --upgrade \
-&& pip3 install ansible ansible-lint --upgrade
+# RUN curl "https://bootstrap.pypa.io/pip/3.6/get-pip.py" > /usr/bin/get-pip.py \
+# && python3 /usr/bin/get-pip.py \
+# && pip install pip3 --upgrade \
+# && pip3 install ansible ansible-lint --upgrade
 
 # add repo for installing Google Cloud SDK packages
 RUN echo "deb http://packages.cloud.google.com/apt cloud-sdk-xenial main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
