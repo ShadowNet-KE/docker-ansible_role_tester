@@ -13,7 +13,7 @@ RUN apt-get -fy install curl aptitude git
 RUN apt-get -fy install python3 python3-apt python3-mysqldb
 
 # download and install the latest, greatest Python packages using pip
-RUN curl "https://bootstrap.pypa.io/2.6/get-pip.py" > /usr/bin/get-pip.py \
+RUN curl "https://bootstrap.pypa.io/pip/3.6/get-pip.py" > /usr/bin/get-pip.py \
 && python3 /usr/bin/get-pip.py \
 && pip install pip3 --upgrade \
 && pip3 install ansible ansible-lint --upgrade
